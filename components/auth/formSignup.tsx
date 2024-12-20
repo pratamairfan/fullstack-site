@@ -17,46 +17,26 @@ const FormSignup = () => {
           <span className="block sm:inline">{state.message}</span>
         </div>
       ) : null}
-      <div className="flex gap-3 justify-between">
-        <div className="w-full">
-          <label
-            htmlFor="firstName"
-            className="block mb-2 text-sm font-medium text-foreground"
-          >
-            First Name
-          </label>
-          <input
-            type="text"
-            name="firstName"
-            placeholder="John"
-            className="bg-gray-50 border border-gray-300 text-background text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
-          />
-          <div aria-live="polite" aria-atomic="true">
-            <span className="text-xs text-red-500 mt-2 ">
-              {state?.error?.firstName}
-            </span>
-          </div>
-        </div>
-        <div className="w-full">
-          <label
-            htmlFor="lastName"
-            className="block mb-2 text-sm font-medium text-foreground"
-          >
-            Last Name
-          </label>
-          <input
-            type="text"
-            name="lastName"
-            placeholder="Doe"
-            className="bg-gray-50 border border-gray-300 text-background text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
-          />
-          <div aria-live="polite" aria-atomic="true">
-            <span className="text-xs text-red-500 mt-2 ">
-              {state?.error?.lastName}
-            </span>
-          </div>
+      <div className="w-full">
+        <label
+          htmlFor="name"
+          className="block mb-2 text-sm font-medium text-foreground"
+        >
+          Name
+        </label>
+        <input
+          type="text"
+          name="name"
+          placeholder="John Doe"
+          className="bg-gray-50 border border-gray-300 text-background text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+        />
+        <div aria-live="polite" aria-atomic="true">
+          <span className="text-xs text-red-500 mt-2 ">
+            {state?.error?.name}
+          </span>
         </div>
       </div>
+
       <div>
         <label
           htmlFor="email"
