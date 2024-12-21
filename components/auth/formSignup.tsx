@@ -97,7 +97,7 @@ const FormSignup = () => {
       <Buttons text="Sign Up" />
       <p className="text-sm font-light text-gray-500">
         Already have an account?
-        <Link href="/sign-in" className="text-teal-700 hover:underline">
+        <Link href="/sign-in" className="text-teal-500 hover:underline">
           {" "}
           Sign in
         </Link>

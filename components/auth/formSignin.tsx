@@ -59,7 +59,7 @@ const FormSignin = () => {
       <Buttons text="Sign In" />
       <p className="text-sm font-light text-gray-500">
         Don&apos;t have an account yet?
-        <Link href="/sign-up" className="text-teal-700 hover:underline">
+        <Link href="/sign-up" className="text-teal-500 hover:underline">
           {" "}
           Sign up
         </Link>

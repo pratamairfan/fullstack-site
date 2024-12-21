@@ -6,7 +6,7 @@ const AuthLayout = ({ children }: { children: React.ReactNode }) => {
     <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
       <div className="bg-[url('/images/pattern.svg')]">
         <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto h-screen">
-        <div className="w-full max-w-md py-4 text-foreground">
+        <div className="w-full max-w-md py-4 text-white">
           <Link href="/" className="hover:underline hover:text-teal-500">
             ⇤ <span>back</span>
           </Link>
