@@ -6,7 +6,7 @@ import { SignInSchema } from "./lib/zod";
 import { compareSync } from "bcrypt-ts";
 
 export const { handlers, auth, signIn, signOut } = NextAuth({
-  adapter: PrismaAdapter(prisma),
+  adapter: PrismaAdapter(prisma) as any,
   session: { strategy: "jwt" },
   providers: [
     Credentials({
@@ -56,5 +56,15 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
 
       return true;
     },
+    jwt({ token, user }) {
+      if (user) token.role = user.role;
+      return token;
+    },
+    session({ session, token }) {
+      session.user.id = token.sub
+      session.user.role = token.role
+      return session
+    }
   },
+  
 });
